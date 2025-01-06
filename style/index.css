@@ -1,30 +1,114 @@
 @charset "utf-8";
 
-body{
-    font-family: "Noto Sans TC",serif;
+:root {
+    --primary-color: #24b4d7;
+    --alpha: rgba(255, 255, 255, .4);
 }
 
-img{
+body {
+    font-family: "Noto Sans TC", serif;
+}
+
+img {
     vertical-align: bottom;
 }
 
+.header-head,
+.header-foot,
+.header-bodu {
+    padding: .5rem .7rem;
+}
 
-.header{
-    background-color: rgb(214, 123, 166);
+
+.header {
+    /* background-color: rgb(214, 123, 166); */
     display: flex;
     justify-content: space-between;
     align-items: center;
 }
 
-.header-foot{
+.header-foot {
     display: none;
 }
 
 
-.nav-btnWarp{
+.nav-btnWarp {
     display: none
 }
 
-.nav-ul{
+.nav-ul {
     display: flex;
+}
+
+.nav-li {
+    margin-left: 1rem;
+}
+
+.nav-link {
+    color: var(--primary-color);
+    text-decoration: none;
+}
+
+.nav-link:hover {
+    text-decoration: underline;
+}
+
+/* banner------------- */
+
+.banner {
+    position: relative;
+    /* background-color: pink; */
+    aspect-ratio: 16/9;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.banner-head {
+    padding: 5rem;
+    z-index: 2;
+    position: relative;
+    color: var(--primary-color);
+    background-image: linear-gradient(-45deg,
+            var(--alpha) 0%,
+            var(--alpha) 25%,
+            transparent 26%,
+            transparent 50%,
+            var(--alpha) 51%,
+            var(--alpha) 75%,
+            transparent 76%,
+            transparent 100%);
+    background-size: 7px 7px;
+}
+
+.banner-body {
+    position: absolute;
+    width: 100%;
+    top: 0;
+}
+
+.banner-title{
+    font-size: 3.5rem;
+    font-weight: 500;
+    margin-top: 15px;
+    margin-bottom: 30px;
+}
+
+.banner-subtitle{
+    font-size: 2rem;
+    font-weight: 500;
+}
+
+.banner-description{
+    font-size: 2rem;
+}
+
+.banner-img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: auto;
+    aspect-ratio: 16/9;
+    object-fit: cover;
 }
