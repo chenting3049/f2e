@@ -5,6 +5,66 @@
     --alpha: rgba(255, 255, 255, .4);
 }
 
+.ani-fade{
+    opacity: 0;
+    animation-name: fade;
+    animation-duration: 20s;
+    animation-iteration-count: infinite;
+}
+
+.ani-delay-5{
+    animation-delay: 5s;
+}
+
+.ani-delay-10{
+    animation-delay: 10s;
+}
+
+.ani-delay-15{
+    animation-delay: 15s;
+}
+
+@keyframes fade{
+    0%{
+        opacity: 0;
+    }
+    5%{
+        opacity: 1;
+    }
+    25%{
+        opacity: 1;
+    }
+    30%{
+        opacity: 0;
+    }
+}
+
+.ani-blend-color{
+    animation-name: blend-color;
+    animation-duration: 20s;
+
+}
+
+@keyframes blend-color{
+    0%{
+        color: #fff;
+    }
+    5%{
+        color: var(--primary-color);
+    }
+    50%{
+        color: var(--primary-color);
+    }
+    55%{
+        color: #fff;
+    }
+
+    100%{
+        color: #fff;
+    }
+}
+
+
 body {
     font-family: "Noto Sans TC", serif;
 }
@@ -19,6 +79,11 @@ img {
     padding: .5rem .7rem;
 }
 
+.header-fixed{
+    position: fixed;
+    z-index: 10;
+    width: 100%;
+}
 
 .header {
     /* background-color: rgb(214, 123, 166); */
@@ -112,3 +177,4 @@ img {
     aspect-ratio: 16/9;
     object-fit: cover;
 }
+
